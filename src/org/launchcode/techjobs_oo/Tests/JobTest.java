@@ -18,22 +18,19 @@ public class JobTest {
     PositionType myPositionType = new PositionType();
     CoreCompetency myCoreCompetency = new CoreCompetency();
     Job myJob = new Job("my first job", myEmployer, myLocation, myPositionType, myCoreCompetency);
-
+    Job myJob2 = new Job("my first job", myEmployer, myLocation, myPositionType, myCoreCompetency);
 
     @Test
     public void isIdCorrect() {
-        Assert.assertEquals(1, myJob.getId(), .001);
-    }
+        Assert.assertEquals(1, myJob2.getId() - myJob.getId(), .001);}
+
+//    @Test
+//    public void isIdCorrect() {
+//        Assert.assertEquals(1, myJob.getId(), .001);
+//    }
 
     @Test
     public void isToStringGood() {
         Assert.assertEquals ("my first job", myJob.toString());
     }
 }
-/*
-this.name = name;
-this.employer = employer;
-this.location = location;
-this.positionType = positionType;
-this.coreCompetency = coreCompetency;
- */

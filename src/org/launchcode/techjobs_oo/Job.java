@@ -2,9 +2,6 @@ package org.launchcode.techjobs_oo;
 
 public class Job extends JobField {
 
-    //private int id;
-    //private static int nextId = 1;
-
     private String name;
     private Employer employer;
     private Location location;
@@ -16,8 +13,7 @@ public class Job extends JobField {
     //  the 'id' field.
 
     public Job() {
-        id = nextId;
-        nextId++;
+        super();
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
@@ -44,10 +40,6 @@ public class Job extends JobField {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public Employer getEmployer() {
